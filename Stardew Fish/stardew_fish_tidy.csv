@@ -1,0 +1,83 @@
+fish,location,start_time,end_time,spring,summer,fall,winter,weather,base_sell_price,min_size_inches,max_size_inches,difficulty,behavior,base_exp,bundle,start_time_hr,end_time_hr
+Albacore,Ocean,6am,11am,FALSE,FALSE,TRUE,TRUE,any,75,20,41,60,mixed,23,NA,0,5
+Albacore,Ocean,6pm,2am,FALSE,FALSE,TRUE,TRUE,any,75,20,41,60,mixed,23,NA,12,20
+Anchovy,Ocean,6am,2am,TRUE,FALSE,TRUE,FALSE,any,30,1,17,30,dart,13,NA,0,20
+Blobfish,Night Market Submarine,5pm,2am,FALSE,FALSE,FALSE,TRUE,any,500,8,26,75,floater,28,NA,11,20
+Blue Discus,Ginger Island fresh water,6am,2am,TRUE,TRUE,TRUE,TRUE,any,120,2,10,60,dart,23,NA,0,20
+Bream,Forest River,6pm,2am,TRUE,TRUE,TRUE,TRUE,any,45,12,31,35,smooth,14,Night Fishing Bundle,12,20
+Bream,Town River,6pm,2am,TRUE,TRUE,TRUE,TRUE,any,45,12,31,35,smooth,14,Night Fishing Bundle,12,20
+Bullhead,Mountain Lake,6am,2am,TRUE,TRUE,TRUE,TRUE,any,75,12,32,46,smooth,18,Lake Fish Bundle,0,20
+Carp,Mountain Lake,6am,2am,TRUE,TRUE,TRUE,TRUE,any,30,15,51,15,mixed,8,Lake Fish Bundle,0,20
+Carp,Secret Woods,6am,2am,TRUE,TRUE,TRUE,TRUE,any,30,15,51,15,mixed,8,Lake Fish Bundle,0,20
+Carp,The Sewers,6am,2am,TRUE,TRUE,TRUE,TRUE,any,30,15,51,15,mixed,8,Lake Fish Bundle,0,20
+Catfish,Forest River,6am,12am,TRUE,TRUE,TRUE,FALSE,rainy,200,12,73,75,mixed,28,River Fish Bundle,0,18
+Catfish,Town River,6am,12am,TRUE,TRUE,TRUE,FALSE,rainy,200,12,73,75,mixed,28,River Fish Bundle,0,18
+Catfish,Secret Woods,6am,12am,TRUE,TRUE,TRUE,FALSE,rainy,200,12,73,75,mixed,28,River Fish Bundle,0,18
+Catfish,Witch's Swamp,6am,12am,TRUE,TRUE,TRUE,FALSE,rainy,200,12,73,75,mixed,28,River Fish Bundle,0,18
+Chub,Forest River,6am,2am,TRUE,TRUE,TRUE,TRUE,any,50,12,25,35,dart,14,Field Research Bundle,0,20
+Chub,Mountain Lake,6am,2am,TRUE,TRUE,TRUE,TRUE,any,50,12,25,35,dart,14,Field Research Bundle,0,20
+Dorado,Forest River,6am,7pm,FALSE,TRUE,FALSE,FALSE,any,100,24,33,78,mixed,29,NA,0,13
+Eel,Ocean,4pm,2am,TRUE,FALSE,TRUE,FALSE,rainy,85,12,81,70,smooth,26,Night Fishing Bundle,10,20
+Flounder,Ocean,6am,8pm,TRUE,TRUE,FALSE,FALSE,any,100,4,17,50,sinker,19,NA,0,14
+Flounder,Ginger Island Ocean,6am,8pm,TRUE,TRUE,FALSE,FALSE,any,100,4,17,50,sinker,19,NA,0,14
+Ghostfish,Mines,6am,2am,TRUE,TRUE,TRUE,TRUE,any,45,10,36,50,mixed,19,Specialty Fish Bundle,0,20
+Halibut,Ocean,6am,11am,TRUE,TRUE,FALSE,TRUE,any,80,10,34,50,sinker,19,NA,0,5
+Halibut,Ocean,7pm,2am,TRUE,TRUE,FALSE,TRUE,any,80,10,34,50,sinker,19,NA,13,20
+Herring,Ocean,6am,2am,TRUE,FALSE,FALSE,TRUE,any,30,8,21,25,dart,11,NA,0,20
+Ice Pip,Mines,6am,2am,TRUE,TRUE,TRUE,TRUE,any,500,7,9,85,dart,31,NA,0,20
+Largemouth Bass,Mountain Lake,6am,7pm,TRUE,TRUE,TRUE,TRUE,any,100,11,31,50,mixed,19,Lake Fish Bundle,0,13
+Lava Eel,Mines,6am,2am,TRUE,TRUE,TRUE,TRUE,any,700,31,33,90,mixed,33,NA,0,20
+Lava Eel,Volcano Caldera,6am,2am,TRUE,TRUE,TRUE,TRUE,any,700,31,33,90,mixed,33,NA,0,20
+Lingcod,Forest River,6am,2am,FALSE,FALSE,FALSE,TRUE,any,120,30,51,85,mixed,31,NA,0,20
+Lingcod,Mountain Lake,6am,2am,FALSE,FALSE,FALSE,TRUE,any,120,30,51,85,mixed,31,NA,0,20
+Lingcod,Town River,6am,2am,FALSE,FALSE,FALSE,TRUE,any,120,30,51,85,mixed,31,NA,0,20
+Lionfish,Ginger Island Ocean,6am,2am,TRUE,TRUE,TRUE,TRUE,any,100,3,13,50,smooth,19,NA,0,20
+Midnight Carp,Forest Pond,10pm,2am,FALSE,FALSE,TRUE,TRUE,any,150,12,53,55,mixed,21,NA,16,20
+Midnight Carp,Mountain Lake,10pm,2am,FALSE,FALSE,TRUE,TRUE,any,150,12,53,55,mixed,21,NA,16,20
+Midnight Carp,Ginger Island fresh water,10pm,2am,FALSE,FALSE,TRUE,TRUE,any,150,12,53,55,mixed,21,NA,16,20
+Midnight Squid,Night Market Submarine,5pm,2am,FALSE,FALSE,FALSE,TRUE,any,100,8,26,55,sinker,21,NA,11,20
+Octopus,Ocean,6am,1pm,FALSE,TRUE,FALSE,FALSE,any,150,12,49,95,sinker,34,NA,0,7
+Perch,Forest River,6am,2am,FALSE,FALSE,FALSE,TRUE,any,55,10,25,35,dart,14,NA,0,20
+Perch,Forest Pond,6am,2am,FALSE,FALSE,FALSE,TRUE,any,55,10,25,35,dart,14,NA,0,20
+Perch,Mountain Lake,6am,2am,FALSE,FALSE,FALSE,TRUE,any,55,10,25,35,dart,14,NA,0,20
+Perch,Town River,6am,2am,FALSE,FALSE,FALSE,TRUE,any,55,10,25,35,dart,14,NA,0,20
+Pike,Forest River,6am,2am,FALSE,TRUE,FALSE,TRUE,any,100,15,61,60,dart,23,NA,0,20
+Pike,Forest Pond,6am,2am,FALSE,TRUE,FALSE,TRUE,any,100,15,61,60,dart,23,NA,0,20
+Pike,Town River,6am,2am,FALSE,TRUE,FALSE,TRUE,any,100,15,61,60,dart,23,NA,0,20
+Pufferfish,Ocean,12am,4pm,FALSE,TRUE,FALSE,FALSE,sunny,200,1,37,80,floater,29,Specialty Fish Bundle,18,10
+Rainbow Trout,Forest River,6am,7pm,FALSE,TRUE,FALSE,FALSE,sunny,65,10,26,45,mixed,18,NA,0,13
+Rainbow Trout,Mountain Lake,6am,7pm,FALSE,TRUE,FALSE,FALSE,sunny,65,10,26,45,mixed,18,NA,0,13
+Rainbow Trout,Town River,6am,7pm,FALSE,TRUE,FALSE,FALSE,sunny,65,10,26,45,mixed,18,NA,0,13
+Red Mullet,Ocean,6am,7pm,FALSE,TRUE,FALSE,TRUE,any,75,8,23,55,smooth,21,NA,0,13
+Red Snapper,Ocean,6am,7pm,FALSE,TRUE,TRUE,TRUE,rainy,50,8,26,40,mixed,16,Ocean Fish Bundle,0,13
+Salmon,Forest River,6am,7pm,FALSE,FALSE,TRUE,FALSE,any,75,24,66,50,mixed,19,NA,0,13
+Salmon,Town River,6am,7pm,FALSE,FALSE,TRUE,FALSE,any,75,24,66,50,mixed,19,NA,0,13
+Sandfish,The Desert,6am,8pm,TRUE,TRUE,TRUE,TRUE,any,75,8,25,65,mixed,24,Specialty Fish Bundle,0,14
+Sardine,Ocean,6am,7pm,TRUE,FALSE,TRUE,TRUE,any,40,1,13,30,dart,13,Ocean Fish Bundle,0,13
+Scorpion Carp,The Desert,6am,8pm,TRUE,TRUE,TRUE,TRUE,any,150,12,33,90,dart,33,NA,0,14
+Sea Cucumber,Ocean,6am,7pm,FALSE,FALSE,TRUE,TRUE,any,75,3,21,40,sinker,16,NA,0,13
+Shad,Forest River,9am,2am,TRUE,TRUE,TRUE,FALSE,rainy,60,20,49,45,smooth,18,NA,3,20
+Shad,Town River,9am,2am,TRUE,TRUE,TRUE,FALSE,rainy,60,20,49,45,smooth,18,NA,3,20
+Slimejack,Mutant Bug Lair,6am,2am,TRUE,TRUE,TRUE,TRUE,any,100,8,26,55,dart,21,NA,0,20
+Smallmouth Bass,Forest Pond,6am,2am,TRUE,FALSE,TRUE,FALSE,any,50,12,25,28,mixed,12,NA,0,20
+Smallmouth Bass,Town River,6am,2am,TRUE,FALSE,TRUE,FALSE,any,50,12,25,28,mixed,12,NA,0,20
+Spookfish,Night Market Submarine,5pm,2am,FALSE,FALSE,FALSE,TRUE,any,220,8,26,60,dart,23,NA,11,20
+Squid,Ocean,6pm,2am,FALSE,FALSE,FALSE,TRUE,any,80,12,49,75,sinker,28,NA,12,20
+Stingray,Ginger Island Pirate Cove,6am,2am,TRUE,TRUE,TRUE,TRUE,any,180,18,61,80,sinker,29,NA,0,20
+Stonefish,Mines,6am,2am,TRUE,TRUE,TRUE,TRUE,any,300,14,16,65,sinker,24,NA,0,20
+Sturgeon,Mountain Lake,6am,7pm,FALSE,TRUE,FALSE,TRUE,any,200,12,61,78,mixed,29,Lake Fish Bundle,0,13
+Sunfish,Forest River,6am,7pm,TRUE,TRUE,FALSE,FALSE,sunny,30,5,16,30,mixed,13,NA,0,13
+Sunfish,Forest Pond,6am,7pm,TRUE,TRUE,FALSE,FALSE,sunny,30,5,16,30,mixed,13,NA,0,13
+Super Cucumber,Ocean,6pm,2am,FALSE,TRUE,TRUE,FALSE,any,250,12,37,80,sinker,29,NA,12,20
+Super Cucumber,Ginger Island Ocean,6pm,2am,FALSE,TRUE,TRUE,FALSE,any,250,12,37,80,sinker,29,NA,12,20
+Tiger Trout,Forest River,6am,7pm,FALSE,FALSE,TRUE,TRUE,any,150,10,21,60,dart,23,River Fish Bundle,0,13
+Tiger Trout,Town River,6am,7pm,FALSE,FALSE,TRUE,TRUE,any,150,10,21,60,dart,23,River Fish Bundle,0,13
+Tilapia,Ocean,6am,2pm,FALSE,TRUE,TRUE,FALSE,any,75,11,31,50,mixed,19,Ocean Fish Bundle,0,8
+Tilapia,Ginger Island Rivers,6am,2pm,FALSE,TRUE,TRUE,FALSE,any,75,11,31,50,mixed,19,Ocean Fish Bundle,0,8
+Tuna,Ocean,6am,7pm,FALSE,TRUE,FALSE,TRUE,any,100,12,61,70,smooth,26,Ocean Fish Bundle,0,13
+Void Salmon,Witch's Swamp,6am,2am,TRUE,TRUE,TRUE,TRUE,any,150,24,66,80,mixed,29,The Missing Bundle,0,20
+Walleye,Mountain Lake,12pm,2am,FALSE,FALSE,TRUE,TRUE,rainy,105,10,41,45,smooth,18,Night Fishing Bundle,6,20
+Walleye,Forest River,12pm,2am,FALSE,FALSE,TRUE,TRUE,rainy,105,10,41,45,smooth,18,Night Fishing Bundle,6,20
+Walleye,Forest Pond,12pm,2am,FALSE,FALSE,TRUE,TRUE,rainy,105,10,41,45,smooth,18,Night Fishing Bundle,6,20
+Walleye,Town River,12pm,2am,FALSE,FALSE,TRUE,TRUE,rainy,105,10,41,45,smooth,18,Night Fishing Bundle,6,20
+Woodskip,Secret Woods,6am,2am,TRUE,TRUE,TRUE,TRUE,any,75,11,31,50,mixed,19,Specialty Fish Bundle,0,20

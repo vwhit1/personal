@@ -1,0 +1,83 @@
+fish,location,time_day,spring,summer,fall,winter,weather,base_sell_price,size_inches,difficulty_behavior,base_exp,bundle
+Albacore,Ocean,6am-11am,F,F,T,T,any,75,20-41,60 mixed,23,
+Albacore,Ocean,6pm-2am,F,F,T,T,any,75,20-41,60 mixed,23,
+Anchovy,Ocean,6am-2am,T,F,T,F,any,30,1-17,30 dart,13,
+Blobfish,Night Market Submarine,5pm-2am,F,F,F,T,any,500,8-26,75 floater,28,
+Blue Discus,Ginger Island fresh water,6am-2am,T,T,T,T,any,120,2-10,60 dart,23,
+Bream,Forest River,6pm-2am,T,T,T,T,any,45,12-31,35 smooth,14,Night Fishing Bundle
+Bream,Town River,6pm-2am,T,T,T,T,any,45,12-31,35 smooth,14,Night Fishing Bundle
+Bullhead,Mountain Lake,6am-2am,T,T,T,T,any,75,12-32,46 smooth,18,Lake Fish Bundle
+Carp,Mountain Lake,6am-2am,T,T,T,T,any,30,15-51,15 mixed,8,Lake Fish Bundle
+Carp,Secret Woods,6am-2am,T,T,T,T,any,30,15-51,15 mixed,8,Lake Fish Bundle
+Carp,The Sewers,6am-2am,T,T,T,T,any,30,15-51,15 mixed,8,Lake Fish Bundle
+Catfish,Forest River,6am-12am,T,T,T,F,rainy,200,12-73,75 mixed,28,River Fish Bundle
+Catfish,Town River,6am-12am,T,T,T,F,rainy,200,12-73,75 mixed,28,River Fish Bundle
+Catfish,Secret Woods,6am-12am,T,T,T,F,rainy,200,12-73,75 mixed,28,River Fish Bundle
+Catfish,Witch's Swamp,6am-12am,T,T,T,F,rainy,200,12-73,75 mixed,28,River Fish Bundle
+Chub,Forest River,6am-2am,T,T,T,T,any,50,12-25,35 dart,14,Field Research Bundle
+Chub,Mountain Lake,6am-2am,T,T,T,T,any,50,12-25,35 dart,14,Field Research Bundle
+Dorado,Forest River,6am-7pm,F,T,F,F,any,100,24-33,78 mixed,29,
+Eel,Ocean,4pm-2am,T,F,T,F,rainy,85,12-81,70 smooth,26,Night Fishing Bundle
+Flounder,Ocean,6am-8pm,T,T,F,F,any,100,4-17,50 sinker,19,
+Flounder,Ginger Island Ocean,6am-8pm,T,T,F,F,any,100,4-17,50 sinker,19,
+Ghostfish,Mines,6am-2am,T,T,T,T,any,45,10-36,50 mixed,19,Specialty Fish Bundle
+Halibut,Ocean,6am-11am,T,T,F,T,any,80,10-34,50 sinker,19,
+Halibut,Ocean,7pm-2am,T,T,F,T,any,80,10-34,50 sinker,19,
+Herring,Ocean,6am-2am,T,F,F,T,any,30,8-21,25 dart,11,
+Ice Pip,Mines,6am-2am,T,T,T,T,any,500,7-9,85 dart,31,
+Largemouth Bass,Mountain Lake,6am-7pm,T,T,T,T,any,100,11-31,50 mixed,19,Lake Fish Bundle
+Lava Eel,Mines,6am-2am,T,T,T,T,any,700,31-33,90 mixed,33,
+Lava Eel,Volcano Caldera,6am-2am,T,T,T,T,any,700,31-33,90 mixed,33,
+Lingcod,Forest River,6am-2am,F,F,F,T,any,120,30-51,85 mixed,31,
+Lingcod,Mountain Lake,6am-2am,F,F,F,T,any,120,30-51,85 mixed,31,
+Lingcod,Town River,6am-2am,F,F,F,T,any,120,30-51,85 mixed,31,
+Lionfish,Ginger Island Ocean,6am-2am,T,T,T,T,any,100,3-13,50 smooth,19,
+Midnight Carp,Forest Pond,10pm-2am,F,F,T,T,any,150,12-53,55 mixed,21,
+Midnight Carp,Mountain Lake,10pm-2am,F,F,T,T,any,150,12-53,55 mixed,21,
+Midnight Carp,Ginger Island fresh water,10pm-2am,F,F,T,T,any,150,12-53,55 mixed,21,
+Midnight Squid,Night Market Submarine,5pm-2am,F,F,F,T,any,100,8-26,55 sinker,21,
+Octopus,Ocean,6am-1pm,F,T,F,F,any,150,12-49,95 sinker,34,
+Perch,Forest River,6am-2am,F,F,F,T,any,55,10-25,35 dart,14,
+Perch,Forest Pond,6am-2am,F,F,F,T,any,55,10-25,35 dart,14,
+Perch,Mountain Lake,6am-2am,F,F,F,T,any,55,10-25,35 dart,14,
+Perch,Town River,6am-2am,F,F,F,T,any,55,10-25,35 dart,14,
+Pike,Forest River,6am-2am,F,T,F,T,any,100,15-61,60 dart,23,
+Pike,Forest Pond,6am-2am,F,T,F,T,any,100,15-61,60 dart,23,
+Pike,Town River,6am-2am,F,T,F,T,any,100,15-61,60 dart,23,
+Pufferfish,Ocean,12am-4pm,F,T,F,F,sunny,200,1-37,80 floater,29,Specialty Fish Bundle
+Rainbow Trout,Forest River,6am-7pm,F,T,F,F,sunny,65,10-26,45 mixed,18,
+Rainbow Trout,Mountain Lake,6am-7pm,F,T,F,F,sunny,65,10-26,45 mixed,18,
+Rainbow Trout,Town River,6am-7pm,F,T,F,F,sunny,65,10-26,45 mixed,18,
+Red Mullet,Ocean,6am-7pm,F,T,F,T,any,75,8-23,55 smooth,21,
+Red Snapper,Ocean,6am-7pm,F,T,T,T,rainy,50,8-26,40 mixed,16,Ocean Fish Bundle
+Salmon,Forest River,6am-7pm,F,F,T,F,any,75,24-66,50 mixed,19,
+Salmon,Town River,6am-7pm,F,F,T,F,any,75,24-66,50 mixed,19,
+Sandfish,The Desert,6am-8pm,T,T,T,T,any,75,8-25,65 mixed,24,Specialty Fish Bundle
+Sardine,Ocean,6am-7pm,T,F,T,T,any,40,1-13,30 dart,13,Ocean Fish Bundle
+Scorpion Carp,The Desert,6am-8pm,T,T,T,T,any,150,12-33,90 dart,33,
+Sea Cucumber,Ocean,6am-7pm,F,F,T,T,any,75,3-21,40 sinker,16,
+Shad,Forest River,9am-2am,T,T,T,F,rainy,60,20-49,45 smooth,18,
+Shad,Town River,9am-2am,T,T,T,F,rainy,60,20-49,45 smooth,18,
+Slimejack,Mutant Bug Lair,6am-2am,T,T,T,T,any,100,8-26,55 dart,21,
+Smallmouth Bass,Forest Pond,6am-2am,T,F,T,F,any,50,12-25,28 mixed,12,
+Smallmouth Bass,Town River,6am-2am,T,F,T,F,any,50,12-25,28 mixed,12,
+Spookfish,Night Market Submarine,5pm-2am,F,F,F,T,any,220,8-26,60 dart,23,
+Squid,Ocean,6pm-2am,F,F,F,T,any,80,12-49,75 sinker,28,
+Stingray,Ginger Island Pirate Cove,6am-2am,T,T,T,T,any,180,18-61,80 sinker,29,
+Stonefish,Mines,6am-2am,T,T,T,T,any,300,14-16,65 sinker,24,
+Sturgeon,Mountain Lake,6am-7pm,F,T,F,T,any,200,12-61,78 mixed,29,Lake Fish Bundle
+Sunfish,Forest River,6am-7pm,T,T,F,F,sunny,30,5-16,30 mixed,13,
+Sunfish,Forest Pond,6am-7pm,T,T,F,F,sunny,30,5-16,30 mixed,13,
+Super Cucumber,Ocean,6pm-2am,F,T,T,F,any,250,12-37,80 sinker,29,
+Super Cucumber,Ginger Island Ocean,6pm-2am,F,T,T,F,any,250,12-37,80 sinker,29,
+Tiger Trout,Forest River,6am-7pm,F,F,T,T,any,150,10-21,60 dart,23,River Fish Bundle
+Tiger Trout,Town River,6am-7pm,F,F,T,T,any,150,10-21,60 dart,23,River Fish Bundle
+Tilapia,Ocean,6am-2pm,F,T,T,F,any,75,11-31,50 mixed,19,Ocean Fish Bundle
+Tilapia,Ginger Island Rivers,6am-2pm,F,T,T,F,any,75,11-31,50 mixed,19,Ocean Fish Bundle
+Tuna,Ocean,6am-7pm,F,T,F,T,any,100,12-61,70 smooth,26,Ocean Fish Bundle
+Void Salmon,Witch's Swamp,6am-2am,T,T,T,T,any,150,24-66,80 mixed,29,The Missing Bundle
+Walleye,Mountain Lake,12pm-2am,F,F,T,T,rainy,105,10-41,45 smooth,18,Night Fishing Bundle
+Walleye,Forest River,12pm-2am,F,F,T,T,rainy,105,10-41,45 smooth,18,Night Fishing Bundle
+Walleye,Forest Pond,12pm-2am,F,F,T,T,rainy,105,10-41,45 smooth,18,Night Fishing Bundle
+Walleye,Town River,12pm-2am,F,F,T,T,rainy,105,10-41,45 smooth,18,Night Fishing Bundle
+Woodskip,Secret Woods,6am-2am,T,T,T,T,any,75,11-31,50 mixed,19,Specialty Fish Bundle

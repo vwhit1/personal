@@ -1,0 +1,73 @@
+---
+title: "Stardew Valley Fish part 1 - Tidying"
+author: "Valerie Whitfield"
+output:
+  html_document:
+    theme: spacelab
+    toc: false
+  pdf_document:
+    toc: false
+---
+
+## Intro
+
+And so begins my first R project outside of class, on March 5th, 2024! My professor showed us a group project example shiny app showcasing animal crossing catch times, and I immediately thought that something similar would be extremely useful for Stardew Valley fish. I'd been struggling with keeping track of all the fish and realized that the data would be perfect for analysis in R! So, here goes nothing :) I look forward to seeing what this becomes.
+
+## Data cleaning portion
+
+### Load the libraries
+```{r}
+library(tidyverse)
+```
+### Read the csv
+```{r}
+fish <- read_csv(file="stardew_fish_init.csv")
+```
+Let's check it out: it works!
+```{r}
+head(fish)
+```
+Check out the structure too:
+```{r}
+glimpse(fish)
+```
+
+### Tidy it up
+I have already done some significant tidying: converting the column names to lowercase, moving time_day out of the season columns, converting the seasons to binary true/false, making duplicate rows for multiple locations, and a few more things.
+
+However, although I did some tidying in advance, there are still some important things to do. 
+1) Convert time_day into start_time and end_time by using separate()
+2) Convert size_inches into min_size_in and max_size_in by using separate()
+3) Convert difficulty_behavior to difficulty and behavior by using separate()
+4) Convert the start and end times to ints for ease of plotting
+5) Convert all other numbers from chr to dbl
+
+Mostly involving separate! I figured those would be easiest to do within R, and then I'd write the result as a csv.
+
+
+```{r}
+times <- c("6am","7am","8am","9am","10am","11am","12pm","1pm","2pm","3pm","4pm","5pm","6pm","7pm","8pm","9pm","10pm","11pm","12am","1am","2am")
+time_to_hr_vector <- setNames(seq_along(times) - 1, times)
+
+fish_tidy <- fish %>% 
+  separate(time_day, into= c("start_time", "end_time"), sep = "-") %>% 
+  separate(size_inches, into= c("min_size_inches", "max_size_inches"), sep = "-") %>% 
+  separate(difficulty_behavior, into= c("difficulty", "behavior"), sep = " ") %>% 
+  mutate(start_time_hr = map_int(start_time, ~time_to_hr_vector[.x])) %>% 
+  mutate(end_time_hr = map_int(end_time, ~time_to_hr_vector[.x])) %>% 
+  mutate(across(c(base_sell_price, min_size_inches, max_size_inches, difficulty, base_exp),
+                as.numeric))
+
+head(fish_tidy)
+```
+```{r}
+glimpse(fish_tidy)
+```
+
+## Success!
+Now time to write the new file to a csv. I only need to do this once, so I'll comment it out when I've done it.
+```{r}
+#write_csv(fish_tidy, file = "stardew_fish_tidy.csv")
+```
+
+And that's a wrap! I'm excited to work more on this tomorrow.
