@@ -1,0 +1,85 @@
+---
+title: "Stardew Valley Fish part 2 - First Graphs"
+author: "Valerie Whitfield"
+output:
+  html_document:
+    theme: spacelab
+    toc: false
+  pdf_document:
+    toc: false
+---
+
+## Intro
+
+With my freshly tidied CSV of the Stardew fish data, I will now look into what data I need to visually represent and how best to pull that off!
+
+I know that I'll need to filter by season and group by location most typically. Also, I know that the x variable will almost always be fish name while the y variable will most commonly be time of day but will sometimes be some of the other variables like sell price, inches, difficulty, etc.
+
+## Loading everything in
+
+Libraries...
+```{r}
+library("tidyverse")
+```
+
+Files...
+```{r}
+fish_df <- read_csv(file = "stardew_fish_tidy.csv")
+```
+
+
+## Graphing
+
+### Figuring out how to graph
+
+I'll start with graphing fish type against time, since that's the most useful and likely the most difficult since it involves converting the times to plottable values and displaying the times in hours.
+
+I have the start time and end time as values from 0-20, and I want to figure out how to plot every fish's catching time. I think `geom_linerange` may be the way to go.
+
+
+Using the same time/hr conversion as the previous part...
+```{r}
+times <- c("6am","7am","8am","9am","10am","11am","12pm","1pm","2pm","3pm","4pm","5pm","6pm","7pm","8pm","9pm","10pm","11pm","12am","1am","2am")
+time_to_hr_vector <- setNames(seq_along(times) - 1, times)
+```
+
+
+```{r}
+fish_df %>% 
+  filter(summer==T) %>% 
+  ggplot(aes(y=reorder(fish, desc(fish)), 
+             xmin=start_time_hr, xmax=end_time_hr))+
+  geom_linerange(linewidth=3, color="blue")+
+  scale_x_continuous(breaks=time_to_hr_vector, labels=times, position="top")+
+  labs(title="Summer fish catching times", y="Fish")+
+  theme(axis.text = element_text(size=7))
+```
+
+YES! YES IT'S BEAUTIFUL! OH I'M SO GLAD IT WORKED!
+
+Now I have to figure out how to make it display the time of day as it appears in-game (6am, 12pm, etc - the start_time values) instead of 0-20. AND NOW I GOT THAT TOO WE ARE WINNINGGGGG
+
+Now just to figure out fills by location! Ok I got the code to work but it's not that valuable since each fish is only listed once but some have multiple locations. Faceting is too crunchy. Best to just filter as needed.
+
+I'll see if I can make the plot into an object and plot each season in that way.
+
+```{r}
+fish_hr_p <- 
+  ggplot(data=fish_df, aes(y=reorder(fish, desc(fish)), 
+             xmin=start_time_hr, xmax=end_time_hr))+
+  geom_linerange(linewidth=3, color="blue")+
+  scale_x_continuous(breaks=time_to_hr_vector, labels=times, position="top")+
+  labs(title="Fish catching times", y="Fish")+
+  theme(axis.text = element_text(size=7))
+```
+
+Here's spring as an example:
+```{r}
+fish_hr_p$data <- filter(fish_df, spring==T)
+fish_hr_p
+```
+Nice!
+
+## That's a wrap!
+
+Now time to make it into a shiny app!
