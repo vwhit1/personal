@@ -165,61 +165,87 @@ WAHOOO IT WORKS! I can now filter by location and season, and it's colored by we
 
 Now I will try a bigger and badder app... ooo
 ```{r}
-ui <- fluidPage(    
+ui <- fluidPage(
+  titlePanel("Stardew Fish Plotting"),
   
-  titlePanel("Stardew fish catching times"), # give the page a title
-  
-  # generate a row with a sidebar
-  sidebarLayout(      
+  sidebarLayout(
+    sidebarPanel(
+      selectInput("master_input", "Select Plot Type",
+                  choices = c("Plot Fish Type against Catch Time", 
+                              "Plot Fish Type against Sell Price"))
+    ),
     
-  # define the sidebar with one input
-  sidebarPanel(
-  checkboxGroupInput("selected_vars", "Select season:",
-                         choices = c("spring", "summer", "fall", "winter"),
-                         selected = "spring"), 
-  selectInput("location", "Select location:", choices=c("All", unique(fish_df$location), "Ginger Island - All"), selected = "All"),
-              hr()),
-    
-  # create a spot for the barplot
-  mainPanel(
-  plotOutput("fishPlot", width="800px", height="800px"))
+    mainPanel(
+      uiOutput("additional_inputs"),
+      plotOutput("plot", width="800px", height="800px")
+    )
   )
-  )
+)
 
-  # define a server for the Shiny app
-  server <- function(input, output, session) {
+
+# define a server for the Shiny app
+server <- function(input, output, session) {
   
   # this stops the app upon closing
   session$onSessionEnded(stopApp)
-      
-  # fill in the spot we created for a plot
-  output$fishPlot <- renderPlot({
-    if (length(input$selected_vars) > 0) {
-      filter_expr <- paste(input$selected_vars, "== TRUE", collapse = " | ")
-      filter_expr <- str_c("(", filter_expr, ")")
-    } else {
-      "Please select at least one variable."
+  
+  #changes UI by master_input
+  output$additional_inputs <- renderUI({
+    plot_type <- input$master_input
+    
+    if (plot_type == "Plot Fish Type against Catch Time") {
+      tagList(
+        checkboxGroupInput("selected_seasons", "Select season:",
+                         choices = c("spring", "summer", "fall", "winter"),
+                         selected = "spring"), 
+        selectInput("location", "Select location:",
+                    choices=c("All", unique(fish_df$location), "Ginger Island - All"), selected = "All"),
+        checkboxInput("bundle_only", "Only Show Bundle Fish", value = FALSE)
+      )
+    } else if (plot_type == "Plot Fish Type against Sell Price") {
+      tagList(
+        checkboxInput("show_difficulty", "Show Difficulty", value = FALSE),
+        checkboxInput("show_experience", "Show Experience Points", value = FALSE)
+      )
     }
-    
-    times <- c("6am","7am","8am","9am","10am","11am","12pm","1pm","2pm","3pm","4pm","5pm","6pm","7pm","8pm","9pm","10pm","11pm","12am","1am","2am")
-    
-    fish_df %>% 
-      filter(!!rlang::parse_expr(filter_expr)) %>% 
-      {if (input$location != "All") {
-        if (input$location == "Ginger Island - All") {
-          filter(., str_detect(location, "Ginger Island"))
-          } else filter(., location == input$location)
-        } else .} %>% 
-      ggplot(aes(y=reorder(fish, desc(fish)), 
-             xmin=start_time_hr, xmax=end_time_hr, color=weather))+
-      geom_linerange(linewidth=3)+
-      scale_color_manual(values = c("#FF9999", "#9999FF", "#FFFF99"))+
-      scale_x_continuous(breaks=0:20, labels=times, position="top")+
-      labs(title="Fish catching times", y="Fish", x="Time")+
-      theme(axis.text.x = element_text(size=10),
-            axis.text.y = element_text(size=18),
-            axis.title = element_text(size=15),
-            title = element_text(size=20))
+  })
+  # fill in the spot we created for a plot
+  output$plot <- renderPlot({
+    plot_type <- input$master_input
+    if (plot_type == "Plot Fish Type against Catch Time") {
+      if (length(input$selected_seasons) > 0) {
+        filter_expr <- paste(input$selected_seasons, "== TRUE", collapse = " | ")
+        filter_expr <- str_c("(", filter_expr, ")")
+      } else {
+        "Please select at least one variable."
+      }
+      
+      times <- c("6am","7am","8am","9am","10am","11am","12pm","1pm","2pm","3pm","4pm","5pm","6pm","7pm","8pm","9pm","10pm","11pm","12am","1am","2am")
+
+      fish_df %>% 
+        {if (input$bundle_only == TRUE) {filter(., !is.na(fish_df$bundle))} else .} %>% 
+        filter(!!rlang::parse_expr(filter_expr)) %>% 
+        {if (input$location != "All") {
+          if (input$location == "Ginger Island - All") {
+            filter(., str_detect(location, "Ginger Island"))
+            } else filter(., location == input$location)
+          } else .} %>% 
+            ggplot(aes(y=reorder(fish, desc(fish)), 
+                   xmin=start_time_hr, xmax=end_time_hr, color=weather))+
+            geom_linerange(linewidth=3)+
+            scale_color_manual(values = c("#FF9999", "#9999FF", "#FFFF99"))+
+            scale_x_continuous(breaks=0:20, labels=times, position="top")+
+            labs(title="Fish catching times", y="Fish", x="Time")+
+            theme(axis.text.x = element_text(size=10),
+                  axis.text.y = element_text(size=18),
+                  axis.title = element_text(size=15),
+              title = element_text(size=20))
+        } else if (plot_type == "Plot Fish Type against Sell Price") {
+            fish_df %>% 
+              ggplot(aes(x=reorder(fish, desc(fish)), y=base_sell_price))+
+              geom_col(fill="blue")+
+              coord_flip()
+    }
   })
   }
 
